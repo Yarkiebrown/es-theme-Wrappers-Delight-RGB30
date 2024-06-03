@@ -7,7 +7,7 @@ Thanks to the author of the excellent RetroPie guide for creating themes https:/
 -->
 
 
-<theme defaultView="basic">
+<theme>
 
     <formatVersion>7</formatVersion>
 
@@ -48,12 +48,6 @@ Thanks to the author of the excellent RetroPie guide for creating themes https:/
     <pos>1 1</pos>
     <zIndex>1</zIndex>
 </text>
-
-<!--hide battery indicator-->
-
-      <batteryIndicator name="batteryIndicator">
-        <visible>false</visible>
-      </batteryIndicator>
 
 <!--set help area at bottom-->
 <helpsystem name="help">
