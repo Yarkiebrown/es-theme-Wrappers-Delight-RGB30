@@ -1,0 +1,302 @@
+<!--
+theme name:     WRAPPERS DELIGHT
+version:        1.0
+author:         Yarkiebrown
+based on:       "Carbon" by Eric Hettervik " & "Art Book Next" by Anthony Caccese
+Thanks to the author of the excellent RetroPie guide for creating themes https://retropie.org.uk/docs/Creating-Your-Own-EmulationStation-Theme/
+-->
+
+
+<theme defaultView="basic">
+
+    <formatVersion>7</formatVersion>
+
+<!--system select screen-->
+
+<view name="system">
+    
+<!--set BG image-->
+<image name="background" extra="true">
+    <zIndex>10</zIndex>
+    <path>./_inc/backgrounds/${system.theme}.jpg</path>
+    <origin>0 0</origin>
+    <pos>0 0</pos>
+    <size>1 1</size>
+</image>
+
+<!--system carousel //hidden-->
+
+      <carousel name="systemcarousel">
+        <visible>false</visible>
+        <type>horizontal</type>
+        <zIndex>49</zIndex>
+        <pos>-1 -1</pos>
+        <logoAlignment>left</logoAlignment>         
+        <size>1.0 0.934</size>
+        <logoScale>1.6</logoScale>
+        <logoSize>0.3 0.2</logoSize>
+        <color>00000000</color>
+        <maxLogoCount>3</maxLogoCount>  
+
+      </carousel>
+    
+
+
+
+<!--hide number of games-->
+<text name="systemInfo">
+    <pos>1 1</pos>
+    <zIndex>1</zIndex>
+</text>
+
+<!--hide battery indicator-->
+
+      <batteryIndicator name="batteryIndicator">
+        <visible>false</visible>
+      </batteryIndicator>
+
+<!--set help area at bottom-->
+<helpsystem name="help">
+    <textColor>000000</textColor>
+    <iconColor>000000</iconColor>
+    <fontPath>./_inc/fonts/Roboto-Condensed.ttf</fontPath>
+    <fontSize>0.028</fontSize>
+</helpsystem>
+
+<image name="helpgrad" extra="true">
+    <zIndex>11</zIndex>
+    <path>./_inc/images/HelpGrad.png</path>
+    <origin>0 0</origin>
+    <pos>0 0</pos>
+    <size>1 1</size>
+</image>
+
+</view>
+
+
+<!--set background on all gamelist views-->
+
+<view name="basic,detailed,video">
+   <image name="background">
+     <path>./_inc/backgrounds/${system.theme}.jpg</path>
+     <origin>0 0</origin>
+     <pos>0 0</pos>
+      <size>1 1</size>
+    </image>
+    
+         <image name="logo">
+         <path>./_inc/logos/${system.theme}.svg</path>
+		 <path>./_inc/logos/${system.theme}.png</path>
+		 <color>000000</color>
+     </image>
+      
+      <text name="logoText">
+         <fontPath>${logoFont}</fontPath>
+         <forceUppercase>true</forceUppercase>
+         <lineSpacing>1</lineSpacing>
+         <alignment>center</alignment>
+         <fontSize>0.1</fontSize>
+         <color>000000</color>
+      </text>
+
+    <helpsystem name="help">
+         <pos>1 1</pos>
+     </helpsystem>
+     
+ </view>
+ 
+ 
+  <!--add sections and logos on basic game views-->
+
+    <view name="basic">
+<image name="BASIC_BOX_SHADOW" extra="true">
+    <path>./_inc/images/BASIC_BOX_SHADOW.png</path>
+    <zIndex>5</zIndex>
+    <color>000000</color>
+    <origin>0 0</origin>
+    <pos>0 0</pos>
+    <size>1 1</size>
+</image>
+
+    <image name="BASIC_BOX_SECTIONS" extra="true">
+    <path>./_inc/images/BASIC_BOX_SECTIONS.png</path>
+        <zIndex>6</zIndex>
+        <color>000000E6</color>
+    <origin>0 0</origin>
+    <pos>0 0</pos>
+    <size>1 1</size>
+</image>
+
+<image name="logo">
+        <origin>0.5 0.5</origin>
+        <pos>0.5 0.145</pos>
+        <maxSize>0.4 0.15</maxSize>
+        <color>FFFFFF</color>
+</image>
+
+ <textlist name="gamelist">
+         <pos>0.05 0.277</pos>
+         <size>0.9 0.64</size>
+         <alignment>center</alignment>
+         <lineSpacing>1.5</lineSpacing>
+         <fontSize>0.04</fontSize>
+         <scrollSound>./_inc/sounds/select.wav</scrollSound>
+         <fontPath>./_inc/fonts/Cabin-Bold.ttf</fontPath>
+         <horizontalMargin>0.008</horizontalMargin>
+         <selectorColor>222222</selectorColor>
+         <selectedColor>ffffff</selectedColor>
+         <primaryColor>8B8680</primaryColor>
+         <secondaryColor>8B8680</secondaryColor>
+      </textlist>
+
+  </view>
+
+ 
+ <!--add sections on detailed game views-->
+
+<view name="detailed,video">
+<image name="box_shadow" extra="true">
+    <path>./_inc/images/BOX_SHADOWS.png</path>
+        <zIndex>5</zIndex>
+        <color>000000</color>
+    <origin>0 0</origin>
+    <pos>0 0</pos>
+    <size>1 1</size>
+</image>
+    
+    <image name="box_sections" extra="true">
+    <path>./_inc/images/BOX_SECTIONS.png</path>
+        <zIndex>6</zIndex>
+        <color>000000E6</color>
+    <origin>0 0</origin>
+    <pos>0 0</pos>
+    <size>1 1</size>
+</image>
+
+<image name="logo">
+         <origin>0.5 0.5</origin>
+         <pos>0.725 0.145</pos>
+         <maxSize>0.4 0.15</maxSize>
+            <color>FFFFFF</color>
+</image>
+
+    <textlist name="gamelist">
+         <pos>0.055 0.055</pos>
+         <size>0.42 0.88</size>
+         <alignment>left</alignment>
+         <lineSpacing>1.468</lineSpacing>
+         <fontSize>0.038</fontSize>
+         <scrollSound>./_inc/sounds/select.wav</scrollSound>
+         <fontPath>./_inc/fonts/Cabin-Bold.ttf</fontPath>
+         <horizontalMargin>0.008</horizontalMargin>
+         <selectorColor>222222</selectorColor>
+         <selectedColor>ffffff</selectedColor>
+         <primaryColor>8B8680</primaryColor>
+         <secondaryColor>8B8680</secondaryColor>
+    </textlist>
+
+
+ <text name="md_lbl_rating,md_lbl_developer,md_developer,md_lbl_publisher,md_publisher,md_lbl_playcount,md_playcount,md_lbl_lastplayed,md_lbl_players,md_players,md_lbl_releasedate,md_lbl_genre,md_genre,md_name,md_lbl_gametime,md_gametime">
+         <visible>false</visible>
+         <fontPath>./_inc/fonts/Roboto-Condensed.ttf</fontPath>
+         <color>ffffff</color>
+      </text>
+   
+
+ <!--add sections on detailed game views-->
+
+  <text name="md_description">
+        <visible>true</visible>
+        <fontPath>./_inc/fonts/Roboto-Condensed.ttf</fontPath>
+        <lineSpacing>1.0</lineSpacing>
+        <fontSize>0.035</fontSize>
+        <alignment>centre</alignment>
+        <origin>0.5 0.5</origin>
+        <pos>0.739 0.8645</pos>
+         <size>0.42 0.149</size>
+            <color>8B8680</color>
+      </text>
+
+ </view>
+ 
+ <!--add box art / videos-->
+ 
+  <view name="detailed">
+
+      <image name="md_image">
+          <zIndex>48</zIndex>
+         <origin>0.5 0.5</origin>
+         <pos>0.727 0.5</pos>
+         <maxSize>0.4 0.435</maxSize>
+      </image>
+ 
+  </view>
+ 
+ <view name="video">
+
+         <video name="md_video">
+        <origin>0.5 0.5</origin>
+         <pos>0.727 0.5</pos>
+         <maxSize>0.4 0.435</maxSize>
+      </video>
+      
+      <image name="md_marquee">
+         <visible>false</visible>
+      </image>
+      <image name="md_image">
+         <visible>false</visible>
+      </image>
+      
+   </view>
+
+   <!--set upmenu screen-->
+
+   <view name="menu">
+      <menuText name="menutitle">
+         <fontPath>./_inc/fonts/Cabin-Bold.ttf</fontPath>
+         <fontSize>0.06</fontSize>
+         <color>000000</color>
+      </menuText>
+      <menuText name="menufooter">
+         <fontPath>./_inc/fonts/Cabin-Bold.ttf</fontPath>
+         <fontSize>0.022</fontSize>
+         <color>000000</color>
+      </menuText>
+      <menuText name="menutext">
+         <fontPath>./_inc/fonts/Cabin-Bold.ttf</fontPath>
+         <fontSize>0.04</fontSize>
+         <color>000000</color>
+         <separatorColor>ffffff77</separatorColor>
+         <selectedColor>ffffff</selectedColor>
+                  <selectorColor>FF7800</selectorColor>
+
+      </menuText>
+      <menuTextSmall name="menutextsmall">
+         <fontPath>./_inc/fonts/Cabin-Bold.ttf</fontPath>
+         <fontSize>0.025</fontSize>
+         <color>ffffff77</color>
+      </menuTextSmall>
+      <menuGroup name="menugroup">
+         <fontPath>./_inc/fonts/Cabin-Bold.ttf</fontPath>
+         <fontSize>0.0325</fontSize>
+         <color>FF7800</color>
+         <separatorColor>FF7800</separatorColor>
+         <backgroundColor>00000000</backgroundColor>
+         <lineSpacing>2.5</lineSpacing>
+      </menuGroup>
+      <menuBackground name="menubg">
+                   <color>FFC800</color>
+         <size>1 1</size>
+         <cornerSize>20 20</cornerSize>
+      </menuBackground>
+  
+  
+  
+   </view>
+
+
+  
+
+
+</theme>
+
