@@ -17,7 +17,7 @@ Thanks to the author of the excellent RetroPie guide for creating themes https:/
     
 <!--set BG image-->
 <image name="background" extra="true">
-    <zIndex>10</zIndex>
+    <zIndex>11</zIndex>
     <path>./_inc/backgrounds/${system.theme}.jpg</path>
     <origin>0 0</origin>
     <pos>0 0</pos>
